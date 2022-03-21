@@ -1,0 +1,17 @@
+function crearTablaAmigos()
+{
+	var table=document.createElement("table");
+	table.className="tabla";
+	for (i=0; i<amigos.length; i++)
+	{
+		var fila=document.createElement("tr");
+		var celda_nombre=document.createElement("td");
+		var celda_apellido=document.createElement("td");
+		celda_nombre.innerHTML=amigos[i].nombre;
+		celda_apellido.innerHTML=amigos[i].apellido;
+		fila.appendChild(celda_nombre);
+		fila.appendChild(celda_apellido);
+		table.appendChild(fila);
+	}
+	document.getElementById("contenedor_amigos").appendChild(table);
+}
